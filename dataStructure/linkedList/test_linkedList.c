@@ -34,6 +34,20 @@ int main()
 	//리스트 출력
 	printfNodeList(list);
 
+	//모든 노드 제거
+	printf("\ndestroy all nodes..\n");
+	int count = getNodeCount(list); //list에 담긴 노드 개수
+	for (int i = 0; i < count; i++)
+	{
+		currentNode = getNodeAt(list, i); //list에 담긴 노드중 i번째에 위치한 노드를 가져온다
+		
+		if (currentNode != NULL)
+		{
+			removeNode(&list, currentNode); //list에서 삭제
+			destoryNode(currentNode); //해당 노드 메모리 해제
+		}
+	}
+
 	return 0;
 }
 
