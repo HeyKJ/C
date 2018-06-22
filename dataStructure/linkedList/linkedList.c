@@ -33,7 +33,7 @@ void appendNode(Node** headNode, Node* newNode)
 			tailNode = tailNode->nextNode;
 		}
 
-		tailNode->nextNode = newNode; //마지막 테일 노드에 왔다면 그 다음 노드로 newNode를 가리킨다
+		tailNode->nextNode = newNode; //마지막 테일 노드에 왔다면 그 다음 노드로 newNode를 바라본다
 
 	}
 }
@@ -45,7 +45,7 @@ void insertAfter(Node* currentNode, Node* newNode)
 		headNode -> currentNode -> tailNode 순으로 노드가 존재했다고 가정하면
 		현재 newNode는 currentNode 이후에 추가되야하므로 아래와 같다
 		headNode -> currentNode -> newNode -> tailNode
-		따라서 newNode의 다음 노드는 tailNode를 가르켜야 하며
+		따라서 newNode의 다음 노드는 tailNode를 바라봐야 하며
 		currentNode의 다음 노드는 tailNode에서 newNode로 바뀐다
 	*/
 	newNode->nextNode = currentNode->nextNode;
@@ -91,7 +91,7 @@ void removeNode(Node** headNode, Node* removeNode)
 	{
 		Node* currentNode = *headNode;
 
-		//헤드 노드부터 차례대로 removeNode를 가르키는 노드를 찾는다
+		//헤드 노드부터 차례대로 removeNode를 바라보는 노드를 찾는다
 		while (currentNode != NULL && currentNode->nextNode != removeNode)
 		{
 			currentNode = currentNode->nextNode;
@@ -103,7 +103,7 @@ void removeNode(Node** headNode, Node* removeNode)
 				headNode -> currentNode -> removeNode -> Node -> tailNode순으로 노드가 존재했다고 가정하면
 				removeNode는 제거되야 하므로
 				headNode -> currentNode -> Node -> tailNode가 되야 한다
-				따라서 currentNode는 removeNode의 다음 노드를 가르키면 된다
+				따라서 currentNode는 removeNode의 다음 노드를 바라보면 된다
 			*/
 			currentNode->nextNode = removeNode->nextNode;
 		}
