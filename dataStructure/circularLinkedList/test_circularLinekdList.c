@@ -15,7 +15,7 @@ int main()
 		appendNode(&list, newNode); //생성된 노드를 list에 추가
 	}
 
-    /*리스트 출력*/
+	/*리스트 출력*/
 	printfNodeList(list);
 
 	//리스트 세번째 노드에 새로운 노드를 삽입
@@ -24,7 +24,7 @@ int main()
 	newNode = createNode(3000); //3000값을 갖는 새로운 노드를 생성
 	insertAfter(currentNode, newNode); //세번째 노드 뒤에 newNode를 삽입
 
-    /*리스트 출력*/
+	/*리스트 출력*/
 	printfNodeList(list);
 
 	/*노드 리스트의 길이보다 2배만큼 루프를 돌며 환형 링크트 리스트임을 확인*/
