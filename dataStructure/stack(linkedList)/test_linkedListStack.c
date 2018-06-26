@@ -43,5 +43,9 @@ int main()
 	/*스택 상태 출력*/
 	printStackStatus(stack);
 
+	/*스택 소멸*/
+	printf("\ndestroy stack...\n");
+	destroyStack(stack);
+
 	return 0;
 }
