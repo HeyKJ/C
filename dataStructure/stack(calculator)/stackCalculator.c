@@ -62,7 +62,7 @@ void getPostfix(char* infixExpression, char* postfixExpression)
 	*/
 	for (unsigned int i = 0; i < strlen(infixExpression); i++)
 	{
-		//숫자일 경우 스택에 쌓지않고 바로 출력하기 위해 중위 표기식(postfixExpression)에 옮긴다
+		//숫자일 경우 스택에 쌓지않고 바로 출력하기 위해 후위 표기식(postfixExpression)에 옮긴다
 		if (isNumber(infixExpression[i]))
 		{
 			postfixExpression[position++] = infixExpression[i];
