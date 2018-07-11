@@ -27,6 +27,7 @@ int main()
 	int whiteSpaceCount = 0, i = 0;
 
 	/*후위 계산식을 입력*/
+	printf("후위 표기식을 입력(예: 10 2 +) : ");
 	gets_s(expression, sizeof(expression)); //후위 계산식을 입력받음
 
 	/*입력받은 후위 계산식에 존재하는 공백 개수*/
