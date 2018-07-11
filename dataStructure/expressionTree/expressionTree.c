@@ -56,8 +56,12 @@ int main()
 	Node *rootNode = NULL;
 	/*입력받은 후위 표기식으로 트리를 생성*/
 	buildExpressionTree(tokenArray, &i, &rootNode);
+	
 	/*계산 결과*/
 	printf("결과 : %lf\n", calculate(rootNode));
+
+	/*트리 소멸*/
+	destroyTree(rootNode);
 	return 0;
 }
 
@@ -75,7 +79,7 @@ void destroyNode(Node *destroyNode)
 {
 	if (destroyNode != NULL)
 	{
-		free(destroyNode->data);
+		//free(destroyNode->data);
 		free(destroyNode);
 	}
 }
