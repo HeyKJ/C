@@ -74,7 +74,7 @@ void getPostfix(char* infixExpression, char* postfixExpression)
 				이중 공백을 막기 위한 조건식
 				이전 문자가 이미 공백이라면 또 공백을 추가할 필요가 없음
 			*/
-			if (postfixExpression[position - 1] != SPACE && needWhiteSpace)
+			if (position > 0 && postfixExpression[position - 1] != SPACE && needWhiteSpace)
 			{
 				postfixExpression[position++] = SPACE;
 				needWhiteSpace = 0;
