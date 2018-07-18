@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+#define DEV DEV;
+
 void quickSort(int numberArray[], int left, int right);
 
 void swap(int *a, int *b)
@@ -59,6 +61,7 @@ void quickSort(int numberArray[], int left, int right)
 	}
 }
 
+#ifdef DEBUG
 int main()
 {
 	int numberArray[] = { 1, 4, 2, 3 };
@@ -73,3 +76,5 @@ int main()
 
 	return 0;
 }
+#endif // DEBUG
+
