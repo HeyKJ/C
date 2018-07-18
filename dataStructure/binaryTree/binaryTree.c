@@ -11,7 +11,7 @@ typedef struct Node
 
 Node* createNode(char *newData); //노드 생성
 void destroyNode(Node *destoryNode); //노드 제거
-void destroyTee(Node *rootNode); //트리 소멸
+void destroyTree(Node *rootNode); //트리 소멸
 void printPreorderTreeTraversal(Node *rootNode); //트리 탐색 : 전위 순회로 출력
 void printInorderTreeTraversal(Node *rootNode); //트리 탐색 : 중위 순회로 출력
 void printPostorderTreeTraversal(Node *rootNode); //트리 탐색 : 후위 순회로 출력
@@ -69,12 +69,11 @@ void destroyNode(Node *destoryNode)
 {
 	if (destoryNode != NULL)
 	{
-		free(destoryNode->data);
 		free(destoryNode);
 	}
 }
 
-void destroyTee(Node *rootNode)
+void destroyTree(Node *rootNode)
 {
 	if (rootNode == NULL)
 		return;
