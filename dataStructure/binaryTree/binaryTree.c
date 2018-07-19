@@ -79,9 +79,9 @@ void destroyTree(Node *rootNode)
 		return;
 
 	//트리 소멸은 후위 순회를 이용
-	destroyNode(rootNode->leftNode);
-	destroyNode(rootNode->rightNode);
-	free(rootNode);
+	destroyTree(rootNode->leftNode);
+	destroyTree(rootNode->rightNode);
+	destroyNode(rootNode);
 }
 
 void printPreorderTreeTraversal(Node *rootNode)
