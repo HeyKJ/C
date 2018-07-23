@@ -283,7 +283,7 @@ Node* frequencyCount(Node **headNode, int targetData)
 			currentNode = currentNode->nextNode;
 	}
 
-	if (find == 0)
+	if (!find)
 		return targetNode;
 	else
 	{
