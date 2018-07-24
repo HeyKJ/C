@@ -8,7 +8,7 @@ int main()
 
 	for (int i = 0; i < length - 1; i++)
 	{
-		for (int j = i; j < length - (i + 1); j++)
+		for (int j = 0; j < length - (i + 1); j++)
 		{
 			if (numberArray[j] > numberArray[j + 1])
 			{
