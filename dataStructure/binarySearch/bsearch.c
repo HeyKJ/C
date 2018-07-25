@@ -18,7 +18,7 @@ int main()
 	qsort(numberArray, size, sizeof(numberArray[0]), compare);
 
 	int targetData = 10;
-	int *find = bsearch(&targetData, numberArray, size, sizeof(numberArray[0]), compare); //bsearch는 C언어에서 제공하는 이진 탐색 라이브러리이다.
+	int *find = bsearch(&targetData, numberArray, size, sizeof(numberArray[0]), compare); //bsearch는 C언어에서 제공하는 이진 탐색 라이브러리 함수이다.
 	if(find == NULL)
 		printf("not found\n");
 	else
